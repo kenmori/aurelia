@@ -1,14 +1,8 @@
-/**
- * Created by No51 on 2016/08/28.
- */
-
-
-
-import {Todo} './todo';
+import {Todo} from './todo';
 
 export class App {
 	constructor() {
-		this.heading = "Todos";
+		this.heading = "Aurelia Todos";
 		this.todos = [];
 		this.todoDescription = '';
 	}
