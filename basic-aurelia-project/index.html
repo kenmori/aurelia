@@ -4,8 +4,12 @@
     <title>Aurelia</title>
   </head>
   <body aurelia-app="src/main">
-    <script src="scripts/system.js"></script>
-    <script src="scripts/config-typescript.js"></script>
+  <!--This is what tells Aurelia's bootstrapper what module contains the framework configuration as well as what HTML element is the "host" element where the application will be rendered.-->
+  <!--これはAureliaのbootstrapにモジュールがフレームワークの設定を含むことを伝えている
+  アプリケーションが描画されるhostがHTML要素であるのと同じように-->
+  <script src="scripts/system.js"></script>
+    <!--<script src="scripts/config-typescript.js"></script>-->
+    <script src="scripts/config-esnext.js"></script>
     <script src="scripts/aurelia-core.min.js"></script>
     <script>
       System.import('aurelia-bootstrapper');
