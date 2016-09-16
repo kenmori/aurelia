@@ -1,3 +1,18 @@
 <template>
     <h1>${heading}</h1>
+    <form class="form-inline" submit.trigger="addTodo()">
+        <div class="form-group">
+            <input type="text" class="form-control" style="width:60%;float:left;" value.bind="todoDescription" placeholder="今日やること">
+            <button type="submit" style="margin-left: 4%;" class="btn btn-default">Add Todo</button>
+        </div>
+    </form>
+    <ul>
+        <li repeat.for="todo of todos" css="margin-top: ${'15px'}">
+            <input type="checkbox" checked.bind="todo.done">
+            <span css="text-decoration: ${todo.done ? 'line-through' : 'none'}">
+                ${todo.description}
+            </span>
+            <button class="btn btn-primary btn-sm" style="margin-left:20px;" click.trigger="removeTodo(todo)">削除</button>
+        </li>
+    </ul>
 </template>
